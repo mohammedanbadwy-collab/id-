@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081629">
+<title>النسر الذهبي | نقل ورفع الأثاث</title>
+
+<style>
+:root {
+    --navy: #081629;
+    --navy2: #102746;
+    --gold: #eab84c;
+    --orange: #ff8500;
+    --white: #ffffff;
+    --gray: #aab5c3;
+    --bg: #f4f6fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: #202a38;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+    background: var(--navy);
+    color: white;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px #0002;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: var(--orange);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background:
+    linear-gradient(100deg, rgba(5,17,35,.95), rgba(10,37,69,.83)),
+    radial-gradient(circle at 80% 30%, #c18b2b, #102746 65%);
+    color: white;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 720px;
+    padding: 90px 0;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 57px);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #d4dce7;
+    line-height: 2;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 15px 27px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.08);
+}
+
+/* STATS */
+
+.stats {
+    background: white;
+    padding: 30px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: var(--orange);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.stat p {
+    color: #667085;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 75px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title small {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.section-title h2 {
+    color: var(--navy);
+    font-size: 31px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #77818e;
+    line-height: 1.8;
+}
+
+/* SERVICES */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px #00000008;
+    transition: .3s;
+    border-bottom: 3px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--orange);
+}
+
+.service-icon {
+    width: 75px;
+    height: 75px;
+    background: #fff2dc;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    font-size: 35px;
+    margin: 0 auto 20px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #77818e;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* WHY US */
+
+.why {
+    background: var(--navy);
+    color: white;
+}
+
+.why .section-title h2 {
+    color: white;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background: #ffffff0c;
+    padding: 25px;
+    border: 1px solid #ffffff15;
+    border-radius: 13px;
+}
+
+.why-card h3 {
+    color: var(--gold);
+    margin: 12px 0;
+}
+
+.why-card p {
+    color: #c5ceda;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* CALCULATOR */
+
+.calculator-section {
+    background: #eef1f6;
+}
+
+.calculator {
+    background: white;
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px #0000000b;
+}
+
+.calculator label,
+.booking label {
+    display: block;
+    font-weight: bold;
+    color: var(--navy);
+    margin: 18px 0 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce1e8;
+    border-radius: 9px;
+    font-size: 15px;
+    background: #fafbfc;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--orange);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.checkbox-row input {
+    width: auto;
+}
+
+.price-result {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    border-radius: 13px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.price-result h2 {
+    color: var(--gold);
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.price-details {
+    color: #cbd5e1;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    min-height: 210px;
+    background: linear-gradient(135deg,#102746,#234d77);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 15px;
+    font-size: 20px;
+    border: 2px solid #eab84c55;
+}
+
+.gallery-item span {
+    font-size: 50px;
+}
+
+/* BOOKING */
+
+.booking {
+    background: white;
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px #0000000b;
+}
+
+.booking-summary {
+    background: #fff7e8;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--navy);
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050f1e;
+    color: white;
+    padding: 45px 0 20px;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c1cad5;
+    line-height: 2;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff20;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: #8996a7;
+    font-size: 13px;
+}
+
+/* FLOATING BUTTONS */
+
+.floating {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 26px;
+    box-shadow: 0 4px 15px #0004;
+    transition: .3s;
+}
+
+.float-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+.call {
+    background: #174a88;
+}
+
+.top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+/* ANIMATION */
+
+.reveal {
+    animation: appear .7s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+    .services-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+}
+
+@media(max-width:600px) {
+    .stats-grid,
+    .why-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator, .booking {
+        padding: 22px;
+    }
+
+    .hero {
+        min-height: 470px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav-content">
+
+    <div class="logo">
+        🦅 النسر الذهبي
+        <span>GOLDEN EAGLE</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home" onclick="closeMenu()">الرئيسية</a>
+        <a href="#services" onclick="closeMenu()">خدماتنا</a>
+        <a href="#why" onclick="closeMenu()">مميزاتنا</a>
+        <a href="#calculator" onclick="closeMenu()">احسب السعر</a>
+        <a href="#gallery" onclick="closeMenu()">أعمالنا</a>
+        <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
+    </div>
+
+    <a class="nav-btn" href="#booking">احجز الآن</a>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+<div class="container">
+<div class="hero-content reveal">
+
+    <div class="hero-label">🦅 GOLDEN EAGLE MOVING SERVICES</div>
+
+    <h1>
+        ننقل عفشك بأمان<br>
+        <span>من غير ولا خدش</span>
+    </h1>
+
+    <p>
+        النسر الذهبي لنقل ورفع الأثاث والأوناش الهيدروليكية.
+        بنقدم لك خدمات نقل متكاملة باهتمام بكل قطعة في عفشك.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#calculator" class="btn btn-gold">احسب تكلفة النقل</a>
+        <a href="#services" class="btn btn-outline">اكتشف خدماتنا</a>
+    </div>
+
+</div>
+</div>
+</header>
+
+<!-- STATS -->
+
+<div class="stats">
+<div class="container stats-grid">
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>استقبال طلبات الحجز</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>اهتمام بسلامة الأثاث</p>
+    </div>
+
+    <div class="stat">
+        <h2>القاهرة</h2>
+        <p>نطاق خدماتنا</p>
+    </div>
+
+</div>
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+    <small>OUR SERVICES</small>
+    <h2>خدماتنا</h2>
+    <p>كل خدمات نقل ورفع الأثاث في مكان واحد</p>
+</div>
+
+<div class="services-grid">
+
+    <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>أوناش هيدروليكية</h3>
+        <p>رفع وتنزيل الأثاث للأدوار المرتفعة بأمان.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>سيارات نقل مغلقة</h3>
+        <p>سيارات لنقل الأثاث وحماية المنقولات أثناء الطريق.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>تغليف الأثاث</h3>
+        <p>تجهيز وحماية قطع الأثاث والأجهزة أثناء النقل.</p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>نقل شقق كاملة</h3>
+        <p>خدمات نقل متكاملة من العنوان القديم للجديد.</p>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- WHY US -->
+
+<section class="why" id="why">
+<div class="container">
+
+<div class="section-title">
+    <small>WHY GOLDEN EAGLE</small>
+    <h2>ليه تختار النسر الذهبي؟</h2>
+    <p style="color:#bdc9d7">هدفنا نوفر لك تجربة نقل سهلة ومنظمة</p>
+</div>
+
+<div class="why-grid">
+
+    <div class="why-card">
+        <div>⚡</div>
+        <h3>سرعة الاستجابة</h3>
+        <p>استقبال طلبات العملاء والتواصل لتنسيق مواعيد النقل.</p>
+    </div>
+
+    <div class="why-card">
+        <div>🛡️</div>
+        <h3>الحفاظ على الأثاث</h3>
+        <p>الاهتمام بسلامة المنقولات أثناء الرفع والنقل.</p>
+    </div>
+
+    <div class="why-card">
+        <div>💰</div>
+        <h3>أسعار واضحة</h3>
+        <p>احسب السعر التقديري لخدمتك قبل إرسال طلب الحجز.</p>
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- CALCULATOR -->
+
+<section class="calculator-section" id="calculator">
+<div class="container">
+
+<div class="section-title">
+    <small>PRICE CALCULATOR</small>
+    <h2>احسب تكلفة خدمتك</h2>
+    <p>اختار الخدمة وسجل التفاصيل لمعرفة السعر التقديري</p>
+</div>
+
+<div class="calculator">
+
+    <label>اختر الخدمة:</label>
+    <select id="service">
+        <option value="lift">ونش رفع فقط</option>
+        <option value="truck">عربية نقل فقط</option>
+        <option value="both">ونش + عربية</option>
+    </select>
+
+    <div id="liftOptions">
+        <label>الدور المطلوب:</label>
+        <select id="floor">
+            <option value="600">من الدور الأول للرابع - 600 ج</option>
+            <option value="800">من الدور الخامس للثامن - 800 ج</option>
+            <option value="1100">أعلى من الدور الثامن - 1100 ج</option>
+        </select>
+    </div>
+
+    <div id="truckOptions" class="hidden">
+        <label>حجم العربية:</label>
+        <select id="truckSize">
+            <option value="2000">عربية متوسطة / جامبو - 2000 ج</option>
+            <option value="3000">عربية كبيرة / كونتينر - 3000 ج</option>
+        </select>
+    </div>
+
+    <div id="bothOptions" class="hidden">
+        <label>الباقة المطلوبة:</label>
+        <select id="bothSize">
+            <option value="1300">عربية متوسطة + ونش - 1300 ج</option>
+            <option value="1800">عربية كبيرة + ونش - 1800 ج</option>
+        </select>
+    </div>
+
+    <label>عدد العمال:</label>
+    <select id="workers">
+        <option value="0">بدون عمال</option>
+        <option value="1">عامل واحد - 250 ج</option>
+        <option value="2">عاملين - 500 ج</option>
+        <option value="3">3 عمال - 750 ج</option>
+        <option value="4">4 عمال - 1000 ج</option>
+        <option value="5">5 عمال - 1250 ج</option>
+    </select>
+
+    <label>عدد قطع الأثاث:</label>
+    <input type="number" id="items" min="0" placeholder="مثال: 20">
+
+    <div class="checkbox-row">
+        <input type="checkbox" id="extra">
+        <label for="extra" style="margin:0">يوجد أغراض إضافية غير الأثاث (+200 ج)</label>
+    </div>
+
+    <button class="btn btn-gold full-btn" onclick="calculate()">
+        احسب السعر الآن 💰
+    </button>
+
+    <div class="price-result">
+        <p>السعر التقديري للخدمة</p>
+        <h2 id="price">0 جنيه</h2>
+        <div class="price-details" id="details">
+            اختار الخدمة واضغط احسب السعر
+        </div>
+    </div>
+
+    <button class="btn btn-gold full-btn" onclick="goBooking()">
+        احجز الخدمة الآن 🚀
+    </button>
+
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+<div class="container">
+
+<div class="section-title">
+    <small>OUR WORK</small>
+    <h2>معرض أعمالنا</h2>
+    <p>صور خدمات النسر الذهبي</p>
+</div>
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <span>🏗️</span>
+        أوناش رفع الأثاث
+    </div>
+
+    <div class="gallery-item">
+        <span>🚛</span>
+        سيارات نقل الأثاث
+    </div>
+
+    <div class="gallery-item">
+        <span>📦</span>
+        تغليف المنقولات
+    </div>
+
+</div>
+</div>
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking" class="calculator-section">
+<div class="container">
+
+<div class="section-title">
+    <small>BOOK YOUR SERVICE</small>
+    <h2>احجز خدمتك الآن</h2>
+    <p>املأ بياناتك وسيتم تجهيز طلبك على واتساب</p>
+</div>
+
+<div class="booking">
+
+    <div class="booking-summary">
+        <b>تفاصيل الحجز:</b>
+        <div id="bookingSummary">لم يتم اختيار خدمة بعد.</div>
+    </div>
+
+    <label>الاسم بالكامل:</label>
+    <input type="text" id="name" placeholder="اكتب اسمك">
+
+    <label>رقم الموبايل:</label>
+    <input type="tel" id="phone" placeholder="01xxxxxxxxx">
+
+    <label>عنوان التحميل (منين؟):</label>
+    <input type="text" id="from" placeholder="المنطقة والعنوان">
+
+    <label>عنوان التنزيل (لفين؟):</label>
+    <input type="text" id="to" placeholder="المنطقة والعنوان">
+
+    <label>تاريخ النقل:</label>
+    <input type="date" id="date">
+
+    <label>الفترة المناسبة:</label>
+    <select id="time">
+        <option value="صباحاً">صباحاً</option>
+        <option value="مساءً">مساءً</option>
+    </select>
+
+    <label>ملاحظات إضافية:</label>
+    <textarea id="notes" rows="4" placeholder="أي تفاصيل إضافية عن الأثاث أو الشارع..."></textarea>
+
+    <button class="btn btn-gold full-btn" onclick="sendBooking()">
+        إرسال طلب الحجز عبر واتساب 💬
+    </button>
+
+    <p id="message" style="text-align:center;margin-top:15px"></p>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<footer id="contact">
+<div class="container">
+
+    <h2>🦅 النسر الذهبي</h2>
+    <p>لنقل ورفع الأثاث والأوناش الهيدروليكية</p>
+    <p>📍 نخدم جميع أنحاء القاهرة</p>
+    <p>📞 01153166194</p>
+    <p>💬 واتساب متاح لاستقبال طلباتكم</p>
+
+    <a href="https://wa.me/201153166194"
+       class="btn btn-gold"
+       style="margin-top:20px">
+       تواصل معنا الآن
+    </a>
+
+    <div class="footer-bottom">
+        جميع الحقوق محفوظة © 2026 النسر الذهبي
+    </div>
+
+</div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+    <a class="float-btn whatsapp"
+       href="https://wa.me/201153166194"
+       target="_blank"
+       rel="noopener noreferrer">💬</a>
+
+    <a class="float-btn call"
+       href="tel:+201153166194">📞</a>
+</div>
+
+<button class="top-btn" id="topBtn" onclick="scrollTopPage()">↑</button>
+
+<script>
+
+// MENU
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+
+// SERVICE SELECT
+
+const service = document.getElementById("service");
+
+service.addEventListener("change", function() {
+
+    document.getElementById("liftOptions").classList.add("hidden");
+    document.getElementById("truckOptions").classList.add("hidden");
+    document.getElementById("bothOptions").classList.add("hidden");
+
+    if(this.value === "lift") {
+        document.getElementById("liftOptions").classList.remove("hidden");
+    }
+
+    if(this.value === "truck") {
+        document.getElementById("truckOptions").classList.remove("hidden");
+    }
+
+    if(this.value === "both") {
+        document.getElementById("bothOptions").classList.remove("hidden");
+    }
+
+});
+
+// CALCULATOR
+
+let totalPrice = 0;
+let selectedService = "";
+
+function calculate() {
+
+    const type = service.value;
+    const workers = Number(document.getElementById("workers").value);
+    const items = Number(document.getElementById("items").value || 0);
+    const extra = document.getElementById("extra").checked;
+
+    if(items < 0 || !Number.isInteger(items)) {
+        alert("من فضلك أدخل عدد قطع صحيح");
+        return;
+    }
+
+    let base = 0;
+
+    if(type === "lift") {
+        base = Number(document.getElementById("floor").value);
+        selectedService = "ونش رفع فقط";
+    }
+
+    else if(type === "truck") {
+        base = Number(document.getElementById("truckSize").value);
+        selectedService = "عربية نقل أثاث";
+    }
+
+    else {
+        base = Number(document.getElementById("bothSize").value);
+        selectedService = "ونش + عربية";
+    }
+
+    const workersCost = workers * 250;
+    const itemsCost = items * 30;
+    const extraCost = extra ? 200 : 0;
+
+    totalPrice = base + workersCost + itemsCost + extraCost;
+
+    document.getElementById("price").textContent =
+        totalPrice.toLocaleString("en-US") + " جنيه";
+
+    document.getElementById("details").innerHTML =
+        "السعر الأساسي: " + base + " جنيه<br>" +
+        "تكلفة العمال: " + workersCost + " جنيه<br>" +
+        "تكلفة قطع الأثاث: " + itemsCost + " جنيه<br>" +
+        "الأغراض الإضافية: " + extraCost + " جنيه";
+
+    document.getElementById("bookingSummary").innerHTML =
+        "الخدمة: " + selectedService + "<br>" +
+        "عدد القطع: " + items + "<br>" +
+        "عدد العمال: " + workers + "<br>" +
+        "الإجمالي التقديري: " + totalPrice + " جنيه";
+
+}
+
+// BOOKING
+
+function goBooking() {
+
+    if(totalPrice <= 0) {
+        alert("احسب السعر الأول علشان تقدر تحجز");
+        return;
+    }
+
+    document.getElementById("booking").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function sendBooking() {
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const from = document.getElementById("from").value.trim();
+    const to = document.getElementById("to").value.trim();
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const notes = document.getElementById("notes").value.trim();
+
+    const message = document.getElementById("message");
+
+    if(totalPrice <= 0) {
+        message.style.color = "red";
+        message.textContent = "من فضلك احسب السعر الأول.";
+        return;
+    }
+
+    if(!name || !phone || !from || !to) {
+        message.style.color = "red";
+        message.textContent = "من فضلك أكمل البيانات الأساسية.";
+        return;
+    }
+
+    if(!/^01[0125][0-9]{8}$/.test(phone)) {
+        message.style.color = "red";
+        message.textContent = "من فضلك اكتب رقم موبايل مصري صحيح.";
+        return;
+    }
+
+    const whatsappNumber = "201153166194";
+
+    const text =
+`🦅 *طلب حجز جديد - النسر الذهبي*
+
+👤 الاسم: ${name}
+📞 موبايل العميل: ${phone}
+
+🛠️ الخدمة: ${selectedService}
+💰 السعر التقديري: ${totalPrice} جنيه
+
+📍 عنوان التحميل: ${from}
+🏁 عنوان التنزيل: ${to}
+
+📅 تاريخ النقل: ${date || "غير محدد"}
+⏰ الفترة: ${time}
+
+💬 ملاحظات: ${notes || "لا توجد"}
+
+نرجو التواصل لتأكيد الحجز.`;
+
+    const url =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(text);
+
+    message.style.color = "green";
+    message.textContent = "جاري فتح واتساب...";
+
+    window.location.href = url;
+}
+
+// DATE
+
+document.getElementById("date").min =
+    new Date().toISOString().split("T")[0];
+
+// BACK TO TOP
+
+window.addEventListener("scroll", function() {
+
+    const btn = document.getElementById("topBtn");
+
+    btn.style.display =
+        window.scrollY > 400 ? "block" : "none";
+
+});
+
+function scrollTopPage() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
